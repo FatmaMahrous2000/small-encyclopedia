@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+ 
+<head>
+<meta  charset= "utf.8">
+<meta name = "description" content = " html for beginners ">
+<title> MY PAGE </title>
+<style>
+.but1
+{
+ 
+font-size :30px;
+color:brown;
+background-color:white;
+border-color:green;
+border-radius:20px;
+width:150px;
+text-align:center
+}
+.but2
+{
+font-size :30px;
+color:brown;
+background-color:white;
+border-color:green;
+border-radius:20px;
+width:150px;
+text-align:center
+}
+input{width:400px;height:30px;font-size:20px}
+</style>
+ 
+<script type = "text/javascript">
+ 
+function resetit()
+{
+    alert("the form will be reset")
+}
+function validateform()
+{
+var valid = true;
+if (document.rejester.username.value=="")
+  {
+    alert("name is empty"); document.rejester.username.focus();valid=false;
+  }
+else if (document.rejester.email.value=="")
+  {
+    alert("Email is empty");document.rejester.email.focus();valid=false;
+  }
+ else if (document.rejester.email.value.indexOf("@")==-1||document.rejester.email.value.indexOf(".")==-1)
+ {
+ 
+	  alert("please enter valid email, e.g:info@gmail.com");document.rejester.email.focus();valid=false;
+ }
+ else
+ {
+ alert("you have submitted");valid=true;
+ }
+ 
+ 
+ return valid;
+ }
+ 
+</script>
+</head>
+<body style =" margin-top :4% ;background-image:url('k.jpg');background-size:cover;background-position:center;background-repeat:no-repeat ">
+<form name ="rejester"  class = " formname" onreset ="resetit()" onsubmit="return validateform()"  >
+<fieldset>
+  <legend style = "font-size :50px  ;font-style:arial ; color :brown ; border-radius:20px ;width:500px;text-align:center"> personal information:</legend>
+  <div style =" padding-left:5% ; color:black; font-size :40px ; border:solid ; border-color:brown ; padding-top:20px">
+  <label style ="border-bottom:solid ; border-color:brown; border-radius:20px ;width:500px;text-align:center" > Username:</label>
+  <input type ="text" placeholder="type your name" name = "username"  ><br>
+ 
+ 
+ 
+  <label style ="border-bottom:solid ; border-color:brown; border-radius:20px ;width:500px;text-align:center"> Phone        :</label>
+  <input type ="text" placeholder="type your phone" name ="phone"><br>
+  <label style ="border-bottom:solid ; border-color:brown; border-radius:20px ;width:500px;text-align:center"> E_mail        :</label>
+  <input type = "text" placeholder = "enter your e_mail" name ="email"><br>
+  <label style ="border-bottom:solid ; border-color:brown; border-radius:20px ;width:500px;text-align:center"> Password      :</label>
+  <input type ="password" placeholder ="type your password" name = "password">
+ <br>
+<label style ="border-bottom:solid ; border-color:brown; border-radius:20px ;width:500px;text-align:center">Your contry      :</label>
+<select name="contry">
+ 
+<option> Egypt</option>
+<option> palestine</option>
+<option> Uk</option>
+</select><br>
+<label style ="border-bottom:solid ; border-color:brown; border-radius:20px ;width:500px;text-align:center">Gender</label>
+<select name ="gender">
+<option>Male</option>
+<option>Female</option>
+</select><br><br>
+<input type ="checkbox"  background="blue">
+<label style =" font-size=40px; border-bottom:solid ; border-color:brown; border-radius:20px ;width:500px;text-align:center">Remember me </label>
+<br><br>
+<input type = "submit" class = "but1">
+<input type ="reset" value ="reset"  class ="but2"><br><br>
+</div>
+</fieldset>
+</form>
+</body>
+</html>

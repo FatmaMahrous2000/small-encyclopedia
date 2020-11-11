@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+ 
+<head>
+<meta  charset= "utf.8">
+<meta name = "description" content = " html for beginners ">
+<title> MY PAGE </title>
+<style>
+.but2
+{
+font-size :30px;
+color:brown;
+background-color:white;
+border-color:black;
+border-radius:20px;
+width:150px;
+text-align:center
+}
+</style>
+ 
+<script type = "text/javascript">
+function resetit()
+{
+    alert("the form will be reset")
+}
+function validateform()
+{
+var valid = true;
+if (document.rejester.password.value=="1111" && document.rejester.email.value=="rawan@gmail.com")
+   {
+   alert("you have logged in") ;valid=true;
+   }
+else if (document.rejester.password.value=="2222"&&document.rejester.email.value=="hala@gmail.com")
+   {
+    alert("you have logged in"); valid=true;
+   }
+else
+   {
+      alert("your name does not match your email"); valid=false;
+   }
+return valid;
+}
+</script>
+<body style="margin-top :4%;background-image:url('k.jpg');background-size:cover;background-position:center;background-repeat:no-repeat">
+ 
+<form name ="rejester"  class = " formname" onreset ="resetit()" onsubmit="return validateform()"  >
+<fieldset>
+<legend  style = "font-size :50px  ;font-style:arial ; color :red"> Log in here :</legend>
+<div style =" padding-left:5% ; color:balck; font-size :40px ; border:solid ; border-color:black ; padding-bottom :15% ; padding-top:70px ">
+  <label style ="border:solid ; border-top:0; border-color:green; border-radius:20px ;width:500px;text-align:center" > E-mail:</label>
+  <input type ="text" placeholder="type your email" name = "email" style=" border-radius:20px ;text-align:center ;height:40px;width:400px;font-size:20px" ><br><br>
+<label style ="border:solid ; border-top:0; border-color:yellow ; border-radius:20px;width:500px;text-align:center"> Bassword:</label>
+  <input type ="password" placeholder ="type your password" name = "password" style=" border-radius:20px ;text-align:center ;height:40px;width:400px;font-size:20px">
+ <br><br>
+<input type = "submit" class ="but2" > 
+<input type ="reset" value ="reset" class ="but2"><br><br>
+ </div>
+ </fieldset>
+ </form>
+ 
+ 
+ 
+ 
+</body>
+</html>
